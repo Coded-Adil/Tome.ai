@@ -1,10 +1,17 @@
-import React from 'react';
+import BookCard from "@/components/ui/BookCard";
+import HeroSection from "@/components/ui/HeroSection";
+import { sampleBooks } from "@/lib/constants";
 
-const Page = () => {
+export default function Page() {
   return (
-    <div>
-    </div>
-  );
-};
+    <main className="wrapper container">
+      <HeroSection />
 
-export default Page;
+      <div className="library-books-grid">
+        {sampleBooks.map((book) => (
+          <BookCard key={book._id} title={book.title} author={book.author} coverURL={book.coverURL} slug={book.slug} />
+        ))}
+      </div>
+    </main>
+  );
+}
