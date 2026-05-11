@@ -1,5 +1,5 @@
-import BookCard from "@/components/ui/BookCard";
-import HeroSection from "@/components/ui/HeroSection";
+import BookCard from "@/components/BookCard";
+import HeroSection from "@/components/HeroSection";
 import { sampleBooks } from "@/lib/constants";
 
 export default function Page() {
