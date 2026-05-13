@@ -1,7 +1,8 @@
 import { z } from 'zod';
+import { MAX_IMAGE_SIZE } from './constants';
 
 const MAX_PDF_SIZE = 50 * 1024 * 1024;
-const MAX_IMAGE_SIZE = 10 * 1024 * 1024;
+// const MAX_IMAGE_SIZE = 10 * 1024 * 1024;
 
 const fileSchema = z.custom<File>((value) => value instanceof File, {
   message: 'Please select a file.',
